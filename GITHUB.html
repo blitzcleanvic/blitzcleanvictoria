@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blitz Clean Victoria</title>
+  <style>
+    :root {
+      --primary: #0a74da;
+      --accent: #2ecc71;
+      --bg: #f4f7fa;
+      --dark: #222;
+      --text: #333;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: #fff; padding: 80px 20px; text-align: center; }
+    header h1 { font-size: 3rem; letter-spacing: 1px; margin-bottom: 10px; }
+    nav { background: #fff; padding: 10px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; }
+    nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; }
+    nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; }
+    .services-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
+    .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .pricing-table { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .price { background: #fff; padding: 25px; border: 2px solid var(--primary); border-radius: 8px; width: 260px; text-align: center; }
+    .price h3 { margin-bottom: 10px; }
+    .price span { display: block; font-size: 2rem; color: var(--accent); margin-bottom: 10px; }
+    form { display: grid; gap: 15px; max-width: 500px; margin: auto; }
+    input, textarea, button { padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+    button { background: var(--primary); color: #fff; border: none; cursor: pointer; transition: background 0.3s; }
+    button:hover { background: #095ec0; }
+    footer { background: var(--dark); color: #ccc; text-align: center; padding: 25px 10px; font-size: 0.9rem; }
+    @media(max-width:600px){ header h1{font-size:2.2rem;} nav ul{gap:10px;} }
+  </style>
+</head>
+<body>
+  <header id="home">
+    <h1>Blitz Clean Victoria</h1>
+    <p>Think Different… Spray Hard.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#booking">Book</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Blitz Clean Victoria is a Melbourne-based, family-run business that delivers professional wheelie bin cleaning with an eco‑friendly edge. Using high‑pressure technology and biodegradable products, we leave your bins fresh, disinfected and deodorised—without harming the environment.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>Residential Bin Cleaning</h3>
+        <p>Fast, safe and contactless cleaning of household wheelie bins. Say goodbye to odours, bacteria and pests.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Bin Cleaning</h3>
+        <p>Tailored solutions for strata, restaurants, offices and body corporates. Flexible schedules available.</p>
+      </div>
+      <div class="card">
+        <h3>Eco Deodorising</h3>
+        <p>We finish every clean with a plant‑based deodoriser for long‑lasting freshness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-table">
+      <div class="price">
+        <h3>Single Bin</h3>
+        <span>$12</span>
+        <p>One‑off clean<br>Perfect for quick refresh.</p>
+      </div>
+      <div class="price" style="border-color:var(--accent)">
+        <h3>Two Bins</h3>
+        <span>$20</span>
+        <p>Great value<br>Front & recycling bins.</p>
+      </div>
+      <div class="price">
+        <h3>Monthly Plan</h3>
+        <span>$18 / visit</span>
+        <p>Keep bins spotless all year.<br>Cancel anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">Serving suburbs across Melbourne.<br>Minimal water usage – we use your outdoor tap (~5 mins).</p>
+    <p style="text-align:center;margin-top:15px;">
+      📞 <a href="tel:0400123456">0400 123 456</a> &nbsp;|&nbsp;
+      📧 <a href="mailto:hello@blitzcleanvic.com.au">hello@blitzcleanvic.com.au</a>
+    </p>
+  </section>
+
+  <section id="booking">
+    <h2>Book a Clean</h2>
+    <form action="https://formspree.io/f/xzbqlgvp" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone" required />
+      <textarea name="message" rows="4" placeholder="Tell us your suburb and number of bins" required></textarea>
+      <button type="submit">Request Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Blitz Clean Victoria. All rights reserved.
+  </footer>
+</body>
+</html>
